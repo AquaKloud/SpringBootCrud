@@ -17,4 +17,7 @@ public interface CustomerService {
     String deleteCustomer(int customerId);
 
     List<CustomerDTO> getAllCustomer();
+
+
+    List<CustomerDTO> getAllCustomerByActiveState(boolean activeStatus);
 }

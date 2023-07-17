@@ -55,4 +55,14 @@ public class CustomerController {
         return customerDTOS;
     }
 
+    @GetMapping (
+            path = "get-all-customers-by-active-state/{status}"
+    )
+    public List<CustomerDTO> getAllCustomerByActiveState(@PathVariable(value = "status") boolean activeStatus){
+        List<CustomerDTO> customerDTOS = customerService.getAllCustomerByActiveState(activeStatus);
+        return customerDTOS;
+    }
+
+
+
 }

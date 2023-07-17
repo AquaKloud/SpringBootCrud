@@ -1,16 +1,14 @@
-package com.springbootacademy.batch9pos.repo;
+package com.aquakloud.PosSystem.repo;
 
-import com.springbootacademy.batch9pos.entity.Customer;
+import com.aquakloud.PosSystem.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
 @EnableJpaRepositories
-public interface CustomerRepo extends JpaRepository<Customer,Integer> {
-
-
+@Repository
+public interface CustomerRepo extends JpaRepository<Customer, Integer> {
     List<Customer> findAllByActiveState(boolean activeStatus);
 }
